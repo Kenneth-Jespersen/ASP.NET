@@ -1,0 +1,35 @@
+﻿@using NakkeNet.ViewModels
+
+@model CreateEditUserViewModel
+
+
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm(null, null,
+                FormMethod.Post,
+                new { enctype = "multipart/form-data" }))
+ 
+{
+    @Html.ValidationSummary()
+
+    @Html.Partial("_CreateEditUser")
+
+    //Lav checkboxe med competencies
+    <div class="outerContainer">
+        @foreach (var competency in Model.Competencies)
+        {
+            <div class="MarginLeft40 CompetencyDiv">
+
+                <label class="CompetencyLabel"><input class="MarginRight5 Competency" type="checkbox" name="Competencies" value="@competency.Name" />@competency.Name</label>
+                <span class="glyphicon glyphicon-star Invisible"></span>
+            </div>
+        }
+    </div>
+
+
+}

@@ -1,0 +1,24 @@
+﻿@using NakkeNet.Models;
+@model NakkeNet.ViewModels.CreateEditUserViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2 class="link-action">Edit</h2>
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary()
+
+    <img src="@Model.User.ProfileImagePath" alt="Profile image"/>
+
+    @Html.HiddenFor(x => x.User.UserId)
+    @Html.HiddenFor(x => x.User.ProfileImagePath)
+    @Html.Partial("_CreateEditUser")
+
+
+    <input type="submit" value="Save" class="btn btn-primary" id="saveButton" />
+    @Html.ActionLink(" | Back to List", "Index")
+}

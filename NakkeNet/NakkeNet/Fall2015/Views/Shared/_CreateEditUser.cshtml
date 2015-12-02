@@ -1,0 +1,35 @@
+﻿@using NakkeNet.Models
+@model NakkeNet.ViewModels.CreateEditUserViewModel
+
+<div class="blockcenter gray-round">
+
+    <div class="form-group">
+        <label>Firstname</label>
+
+        <!-- Either the html helper -->
+        @Html.TextBoxFor(a => a.User.Firstname, new {@class = "form-control"})
+
+        <!-- Or you can write the html, remember the name attribute so modelbinding works.. -->
+        <!--<input type="text" name="firstname" class="form-control"/>-->
+    </div>
+
+    <div class="form-group">
+        <label>Lastname</label>
+        @Html.TextBoxFor(a => a.User.Lastname, new {@class = "form-control"})
+    </div>
+
+    <div class="form-group">
+        <label>Mobile Phone</label>
+        @Html.TextBoxFor(a => a.User.MobilePhone, new {@class = "form-control"})
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        @Html.TextBoxFor(a => a.User.Email, new { @class = "form-control" })
+    </div>
+
+
+</div>
+<input type="file" name="image" />
+
+
+<input type="submit" value="Save" class="btn btn-primary" id="saveButton" />

@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "GridExamples";
+}
+@{
+    ViewBag.Title = "GridExamples";
+    Layout = ""; //reset layout to use no layout file
+}
+<link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" /> @*Import bootstrap since we set Layout = ""*@
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css" /> @*Import bootstrap since we set Layout = ""*@
+
+<h2>GridExamples</h2>
+
+<p>Example 1</p>
+<p>Goes to vertical when smaller than medium size</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">.col-md-8</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-6 hidden-xs hidden-lg">hides when xs or large</div>
+    </div>
+</div>
+
+
+@*<p>Example 2</p>
+    <div class="container">
+
+        <p>Stack the columns on mobile by making one full-width and the other half-width</p>
+        <div class="row">
+            <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        </div>
+
+        <p>Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop</p>
+        <div class="row">
+            <div class="col-sm-6 col-md-4">.col-xs-6 .col-md-4</div>
+            <div class="col-sm-6 col-md-4">.col-xs-6 .col-md-4</div>
+            <div class="col-sm-6 col-md-4">.col-xs-6 .col-md-4</div>
+        </div>
+    </div>*@
+
+
+
+@*<p>Example 3</p>
+    <div class="container">
+        <p>Full width on xs, half width on sm, 2/3 - 1/3 on medium.</p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        </div>
+    </div>*@
+
+
+@*<a href="@Url.Action("Edit", new { id = @item.UserId})">
+        <img src="@item.ProfileImagePath" alt="Profile image" />
+    </a>*@
