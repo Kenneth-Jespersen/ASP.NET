@@ -12,8 +12,7 @@ namespace NakkeNet.Models
 
         public int UserId { get; set; }
 
-        public Competency competency = new Competency();
-        public CompetencyHeader header = new CompetencyHeader(); 
+
 
         [Required]
         public String Firstname { get; set; }
@@ -21,7 +20,6 @@ namespace NakkeNet.Models
         [Required]
         public String Lastname { get; set; }
 
-        [Required]
         [EmailAddress]
         public String Email { get; set; }
 

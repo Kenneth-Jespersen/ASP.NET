@@ -4,32 +4,24 @@
 <div class="blockcenter gray-round">
 
     <div class="form-group">
-        <label>Firstname</label>
-
-        <!-- Either the html helper -->
-        @Html.TextBoxFor(a => a.User.Firstname, new {@class = "form-control"})
-
-        <!-- Or you can write the html, remember the name attribute so modelbinding works.. -->
-        <!--<input type="text" name="firstname" class="form-control"/>-->
+        @Html.LabelFor(m => m.User.Firstname, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(a => a.User.Firstname, new { @class = "form-control" })
+        </div>
     </div>
 
     <div class="form-group">
-        <label>Lastname</label>
-        @Html.TextBoxFor(a => a.User.Lastname, new {@class = "form-control"})
+        @Html.LabelFor(m => m.User.Lastname, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(a => a.User.Lastname, new { @class = "form-control" })
+        </div>
     </div>
 
     <div class="form-group">
-        <label>Mobile Phone</label>
-        @Html.TextBoxFor(a => a.User.MobilePhone, new {@class = "form-control"})
+        @Html.LabelFor(m => m.User.MobilePhone, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(a => a.User.MobilePhone, new { @class = "form-control" })
+        </div>
     </div>
-    <div class="form-group">
-        <label>Email</label>
-        @Html.TextBoxFor(a => a.User.Email, new { @class = "form-control" })
-    </div>
-
-
 </div>
-<input type="file" name="image" />
 
-
-<input type="submit" value="Save" class="btn btn-primary" id="saveButton" />
