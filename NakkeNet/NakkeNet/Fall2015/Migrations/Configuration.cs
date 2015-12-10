@@ -64,12 +64,20 @@ namespace NakkeNet.Migrations
 {
                     new User
                     {
-                        Firstname = "Christian",
-                        Lastname =  "Kirschberg",
-                        Email = "ckirschberg@gmail.com",
-                        MobilePhone = "61690509",
+                        Firstname = "Kenneth",
+                        Lastname =  "Jespersen",
+                        Email = "kennethjespersen88@gmail.com",
+                        MobilePhone = "12345678",
                         ProfileImagePath = "/ProfileImages/094f03f7-eb3f-47c7-85d8-78a62ac5dd1b.jpg" //requires the image to be located here
 		            },
+                    new User
+                    {
+                        Firstname = "Casper",
+                        Lastname = "Vejdiksen",
+                        Email = "cvejdiksen@gmail.com",
+                        MobilePhone = "12345678",
+                        ProfileImagePath = "/ProfileImages/094f03f7-eb3f-47c7-85d8-78a62ac5dd1b.jpg"
+                    },
                     new User
                     {
                         Firstname = "Hans",
@@ -122,20 +130,27 @@ namespace NakkeNet.Migrations
 
             context.CompetencyHeaders.AddOrUpdate(h => h.CompetencyHeaderId, new CompetencyHeader[]
             {
-                new CompetencyHeader
-                {
-                    CompetencyHeaderId = 1,
-                    Name="Design"
-                },
-                new CompetencyHeader{
-                    CompetencyHeaderId = 2,
-                    Name="Computer programming"
-                },
-                new CompetencyHeader
-                {
-                    CompetencyHeaderId = 3,
-                    Name="Software"
-                }
+            new CompetencyHeader
+            {
+                CompetencyHeaderId = 1,
+                Name = "Områdeleder"
+            },
+            new CompetencyHeader
+            {
+                CompetencyHeaderId = 2,
+                Name = "Floorleder"
+            },
+
+            new CompetencyHeader
+            {
+                CompetencyHeaderId = 3,
+                Name = "Medarbejder"
+            },
+            new CompetencyHeader
+            {
+                CompetencyHeaderId = 4,
+                Name = "Frivillig"
+            }
             });
 
 
@@ -144,36 +159,88 @@ namespace NakkeNet.Migrations
             context.Competencies.AddOrUpdate(c => c.CompetencyId, new Competency[]
         {
             new Competency
-            {
-                CompetencyId = 1,
-                CompetencyHeaderId = 1,
-                Name = "Fashion"
-            },
-            new Competency
-            {
-                CompetencyId = 2,
-                CompetencyHeaderId = 1,
-                Name = "Sewing"
-            },
-
-            new Competency
-            {
-                CompetencyId = 3,
-                CompetencyHeaderId = 2,
-                Name = "Java"
-            },
-            new Competency
-            {
-                CompetencyId = 4,
-                CompetencyHeaderId = 2,
-                Name = "MySQL"
-            },
-            new Competency
-            {
-                CompetencyId = 5,
-                CompetencyHeaderId = 3,
-                Name = "Microsoft Office"
-            },
+                {
+                    CompetencyId = 1,
+                    CompetencyHeaderId = 3,
+                    Name="Backstage"
+                },
+                new Competency{
+                    CompetencyId = 2,
+                    CompetencyHeaderId = 3,
+                    Name="Baren"
+                },
+                new Competency
+                {
+                    CompetencyId = 3,
+                    CompetencyHeaderId = 3,
+                    Name="Det lumre køkken"
+                },
+                new Competency
+                {
+                    CompetencyId = 4,
+                    CompetencyHeaderId = 3,
+                    Name="Forplejning"
+                },
+                new Competency
+                {
+                    CompetencyId = 5,
+                    CompetencyHeaderId = 3,
+                    Name="Fotograf"
+                },
+                new Competency
+                {
+                    CompetencyId = 6,
+                    CompetencyHeaderId = 3,
+                    Name="Frivilligkorps"
+                },
+                new Competency
+                {
+                    CompetencyId = 7,
+                    CompetencyHeaderId = 3,
+                    Name="Indgang"
+                },
+                new Competency
+                {
+                    CompetencyId = 8,
+                    CompetencyHeaderId = 3,
+                    Name="Kiosken"
+                },
+                new Competency
+                {
+                    CompetencyId = 9,
+                    CompetencyHeaderId = 3,
+                    Name="Krea"
+                },
+                new Competency
+                {
+                    CompetencyId = 10,
+                    CompetencyHeaderId = 3,
+                    Name="Nurser"
+                },
+                new Competency
+                {
+                    CompetencyId = 11,
+                    CompetencyHeaderId = 3,
+                    Name="Pølsebod"
+                },
+                new Competency
+                {
+                    CompetencyId = 12,
+                    CompetencyHeaderId = 3,
+                    Name="Samarit"
+                },
+                new Competency
+                {
+                    CompetencyId = 13,
+                    CompetencyHeaderId = 3,
+                    Name="Sikkerhed"
+                },
+                new Competency
+                {
+                    CompetencyId = 14,
+                    CompetencyHeaderId = 3,
+                    Name="Økonomi"
+                }
         });
 
         }
